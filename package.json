@@ -1,0 +1,26 @@
+{
+  "name": "massplash-app",
+  "version": "0.0.0",
+  "description": "Basic MVC Node.js and Express app",
+  "main": "irswebapp.js",
+  "dependencies": {
+    "body-parser": "~1.14.0",
+    "ejs": "~2.3.4",
+    "express": "~4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node irswebapp.js http://127.0.0.1:1337/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "massplash-app"
+  },
+  "keywords": [
+    "Node.js",
+    "Express"
+  ],
+  "author": "MarcinakaSin",
+  "license": "ISC"
+}
+/* npm init (generates this package code)*/
