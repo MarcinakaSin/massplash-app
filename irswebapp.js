@@ -1,3 +1,13 @@
+/*
+Create server-side MVC apps with Node.js and Express 
+https://www.youtube.com/watch?v=QseHOX-5nJQ
+
+Also instructs setup for Azure.
+12factor.net
+*/
+
+
+
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -20,8 +30,10 @@ app.use(require('./todos'));
 
 // start the server
 
-app.listen(1337, function() {
-	console.log('ready on port 1337');
+var port = process.env.PORT || 1337;
+
+app.listen(port, function() {
+	console.log('ready on port ' + port);
 });
 
 
