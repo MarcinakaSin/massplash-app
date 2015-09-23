@@ -6,11 +6,33 @@
 </head>
 <body>
 	<div class="container">
+		<div class="row">
+			<form action="/search" method="post">
+				<div class="col-sm-4">
+					Category<br />
+					<select name="category" style="width: 200px;">
+					<% for (var key in org[0]) { %>
+						<option value="<%= key %>"> <%= key %></option>
+					<% } %>
+
+					</select>
+				</div>
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4"></div>
+				<div class="col-xs-12"><input type="submit" /></div>
+			 	
+			</form>
+		</div>
 		<h1> <%= title %></h1>
 		<ul>
 			<% for (var i = 0; i < items.length; i++){ %>
 				<li><%= items[i].desc %></li>
 			<% } %>
+			<%// for (var c = 0; c < org.length; c++){ 
+			%>
+
+				<li><%//= org[c].EIN %></li>
+			<%// } %>
 
 		</ul>
 		<%= new Date() %>

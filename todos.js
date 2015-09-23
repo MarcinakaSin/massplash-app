@@ -1,5 +1,7 @@
 var express = require('express');
 
+var fs = require('fs');
+
 var router = express.Router();
 
 var todoItems = [
@@ -7,12 +9,19 @@ var todoItems = [
 	{ id: 2, desc: 'bar'},
 	{ id: 3, desc: 'baz'}
 ];
+// Get content from file
+ var contents = fs.readFileSync("data/py14_990_1.json");
+
+// Define to JSON type
+ var jsonContent = JSON.parse(contents);
+
 
 router.get('/', function(req, res) {
 	//res.send('hello, express!');
 	res.render('index', {
 		title: 'My App',
-		items: todoItems
+		items: todoItems,
+		org: jsonContent
 	});
 });
 
